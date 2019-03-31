@@ -49,7 +49,7 @@ Node* DeleteNode(Node* h, int d) {
 
 	//If the data in the head node equals the data to be deleted, this deletes the node
 	if (n->data == d) {
-		return h->next;
+		return n->next;
 	}
 
 	//While node n is not the tail node, search for the node with the data to be deleted
@@ -57,7 +57,6 @@ Node* DeleteNode(Node* h, int d) {
 		//If a node has a next node that contains the data to be deleted, make the next node be the one after that node
 		if (n->next->data == d) {
 			n->next = n->next->next;
-			return h;
 		}
 		//Iterates to the next node
 		n = n->next;
